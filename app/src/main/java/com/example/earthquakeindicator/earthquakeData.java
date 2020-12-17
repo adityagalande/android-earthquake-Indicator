@@ -4,11 +4,13 @@ public class earthquakeData {
     private final String magnitude;
     private final String city;
     private final String date;
+    private final String time;
 
-    earthquakeData(String magnitude, String city, String date) {
+    earthquakeData(String magnitude, String city, String date, String time) {
         this.magnitude = magnitude;
         this.city = city;
         this.date = date;
+        this.time = time;
     }
 
     public String getMagnitude() {
@@ -22,4 +24,6 @@ public class earthquakeData {
     public String getDate() {
         return this.date;
     }
+
+    public String getTime() {return  this.time;}
 }
