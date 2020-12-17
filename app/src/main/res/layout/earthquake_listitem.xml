@@ -29,4 +29,12 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         tools:text="Nov 10,2020" />
+
+    <TextView
+        android:id="@+id/timeText"
+        style="@style/earthquakeTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        tools:text="11:36 AM" />
 </LinearLayout>

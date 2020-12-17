@@ -61,10 +61,13 @@ public final class QueryUtils {
                 JSONObject propertiesJSONObject = currentJSONObject.getJSONObject("properties");
                 String magnitude = propertiesJSONObject.getString("mag");
                 String location = propertiesJSONObject.getString("place");
-                String times = propertiesJSONObject.getString("time");
+                long times = propertiesJSONObject.getLong("time");
+
+                String date = getDate(times, "dd/MMM/yyyy");
+                String time = getDate(times, "h:mm a");
 
 
-                earthquakeData earthquake = new earthquakeData(magnitude, location, getDate(Long.parseLong(times), "dd/MMM/yyyy"));
+                earthquakeData earthquake = new earthquakeData(magnitude, location, date, time);
                 earthquakes.add(earthquake);
 
             }
