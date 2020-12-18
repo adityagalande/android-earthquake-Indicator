@@ -1,19 +1,19 @@
 package com.example.earthquakeindicator;
 
 public class earthquakeData {
-    private final String magnitude;
+    private final double magnitude;
     private final String city;
     private final String date;
     private final String time;
 
-    earthquakeData(String magnitude, String city, String date, String time) {
+    earthquakeData(double magnitude, String city, String date, String time) {
         this.magnitude = magnitude;
         this.city = city;
         this.date = date;
         this.time = time;
     }
 
-    public String getMagnitude() {
+    public double getMagnitude() {
         return this.magnitude;
     }
 
