@@ -5,12 +5,14 @@ public class earthquakeData {
     private final String city;
     private final String date;
     private final String time;
+    private final String url;
 
-    earthquakeData(double magnitude, String city, String date, String time) {
+    earthquakeData(double magnitude, String city, String date, String time, String url) {
         this.magnitude = magnitude;
         this.city = city;
         this.date = date;
         this.time = time;
+        this.url = url;
     }
 
     public double getMagnitude() {
@@ -26,4 +28,6 @@ public class earthquakeData {
     }
 
     public String getTime() {return  this.time;}
+
+    public String getUrl(){return  this.url;}
 }
