@@ -65,9 +65,9 @@ public final class QueryUtils {
 
                 String date = getDate(times, "dd/MMM/yyyy");
                 String time = getDate(times, "h:mm a");
+                String url = propertiesJSONObject.getString("url");
 
-
-                earthquakeData earthquake = new earthquakeData(magnitude, location, date, time);
+                earthquakeData earthquake = new earthquakeData(magnitude, location, date, time, url);
                 earthquakes.add(earthquake);
 
             }

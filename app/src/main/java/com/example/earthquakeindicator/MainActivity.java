@@ -2,7 +2,11 @@ package com.example.earthquakeindicator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -28,5 +32,16 @@ public class MainActivity extends AppCompatActivity {
 
         earthquakeAdapter earthquakeArray = new earthquakeAdapter(this, earthquakes);
         listView.setAdapter(earthquakeArray);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                earthquakeData urlData = earthquakes.get(position);
+
+                Intent URL = new Intent(Intent.ACTION_VIEW);
+                URL.setData(Uri.parse(urlData.getUrl()));
+                startActivity(URL);
+            }
+        });
     }
 }
